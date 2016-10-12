@@ -7,8 +7,5 @@ var MyComponent = Vue.extend({
 
 new Vue({
   el: '#app',
-  data: {
-  	message: 'Hello World!'
-  },
   components: { MyComponent, App }
 })

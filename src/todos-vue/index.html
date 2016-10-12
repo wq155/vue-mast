@@ -6,8 +6,8 @@
   </head>
   <body>
     <div id="app">
-      <h3 v-if="isShow">Todos For Vue.</h3>
-      <input v-model="newTodo" v-on:keyup.enter="addTodo">
+      <h2 v-if="isShow">Todos For Vue.</h2>
+      <p><label>请输入：</label><input v-model="newTodo" v-on:keyup.enter="addTodo" v-on:blur="addTodo" placeholder="What needs to be done?"><p>
       <ul>
         <li v-for="todo in todos">
           <span>{{ todo.text }}</span>

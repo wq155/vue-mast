@@ -1,19 +1,23 @@
 <style>
 	.error {
 		color: red;
+    background-color: #f0f0f0;
 	}
 </style>
 
 <template>
   <validator name="validation1">
-    用户名: <input type="text" v-validate:username=['required']><br />
-    邮箱: <input type="text" v-validate:address="['email']"><br />
-    年龄: <input type="text" v-validate:age=['numeric']><br />
-    网址: <input type="text" v-validate:site=['url']><br />
-    密码： <input type="password" v-model="password1" v-validate:password1=['pwdexp']> <br />
-    重复密码： <input type="password" v-model="password2" v-validate:password2=['pwdexp'] 
+    <section>
+      <p>用户名: <input type="text" v-validate:username=['required']></p>
+      <p>邮箱: <input type="text" v-validate:address="['email']"></p>
+      <p>年龄: <input type="text" v-validate:age=['numeric']></p>
+      <p>网址: <input type="text" v-validate:site=['url']></p>
+      <p>密码： <input type="password" v-model="password1" v-validate:password1=['pwdexp']></p>
+      <p>重复密码： <input type="password" v-model="password2" v-validate:password2=['pwdexp'] 
               @keyup.enter="checkMultiple"
-              @blur="checkMultiple"> <br />
+              @blur="checkMultiple"></p>
+    </section>
+    
     <div class="error">
       <p v-if="$validation1.username.required">用户名为必填信息</p>
       <p v-if="$validation1.address.email">非法的邮箱</p>
