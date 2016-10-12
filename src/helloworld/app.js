@@ -3,7 +3,7 @@ import Vue from 'vue'
 new Vue({
   el: '#app',
   data: {
-    message: 'Hello Vue me!'
+    message: 'Hello Vue.js!'
   }
 })
 
